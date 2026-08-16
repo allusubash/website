@@ -1,1 +1,297 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Weekend Convoy & Long Drive Group</title>
+    <style>
+        /* Modern Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* Hero Banner Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: #ff4757;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: background 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #ff6b81;
+            transform: translateY(-2px);
+        }
+
+        /* Container & Section Layouts */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        section {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #2f3542;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #ff4757;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Route & Itinerary Details */
+        .route-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .route-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 { font-size: 2rem; }
+        }
+
+        .map-box iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 8px;
+        }
+
+        .timeline {
+            list-style: none;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #ced4da;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ff4757;
+        }
+
+        .time {
+            font-weight: bold;
+            color: #ff4757;
+        }
+
+        /* Rules Cards */
+        .rules-list {
+            list-style-type: none;
+        }
+
+        .rules-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .rules-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2ed573;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Free Disclaimer Notice */
+        .disclaimer-box {
+            background-color: #e8f5e9;
+            border-left: 5px solid #2ed573;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        /* Call To Action Box */
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #2f3542, #57606f);
+            color: white;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border-bottom: 3px solid #ffffff;
+        }
+
+        .cta-section p {
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #a4b0be;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Banner -->
+    <header class="hero">
+        <h1>Join Our Next Free Weekend Convoy</h1>
+        <p>No hidden club charges. No commercial fees. Just passionate road trippers mapping out open highways together.</p>
+        <a href="#register" class="btn-primary">Register For The Drive</a>
+    </header>
+
+    <div class="container">
+        
+        <!-- Section: Trip Route & Schedule -->
+        <section id="itinerary">
+            <h2>Route & Itinerary</h2>
+            <div class="route-grid">
+                <div>
+                    <h3>Timeline Schedule</h3>
+                    <br>
+                    <ul class="timeline">
+                        <li class="timeline-item">
+                            <span class="time">05:30 AM</span> - Assemble at the designated highway starting point.
+                        </li>
+                        <li class="timeline-item">
+                            <span class="time">06:00 AM</span> - Strict departure flag-off. Late arrivals must catch up safely.
+                        </li>
+                        <li class="timeline-item">
+                            <span class="time">07:30 AM</span> - Breakfast break at a popular mid-way highway diner.
+                        </li>
+                        <li class="timeline-item">
+                            <span class="time">11:00 AM</span> - Group arrival at the scenic viewpoint destination.
+                        </li>
+                    </ul>
+                </div>
+                <div class="map-box">
+                    <h3>Route Map Preview</h3>
+                    <br>
+                    <!-- Google Maps Embed Placeholder. Replace the src link below with a custom route map link if desired -->
+                    <iframe src="https://google.com" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Group Guidelines -->
+        <section id="rules">
+            <h2>Group Guidelines & Safety Rules</h2>
+            <ul class="rules-list">
+                <li><strong>No Dangerous Driving:</strong> Rash maneuvers, inner-group overtaking, and street-racing are strictly prohibited.</li>
+                <li><strong>Cost Transparency:</strong> Individual participants take care of their own fuel charges, fastag/tolls, and restaurant food items.</li>
+                <li><strong>Vehicle Fitness:</strong> Check your engine oil, coolant levels, tyre pressure, and confirm you carry a working spare wheel before arriving.</li>
+                <li><strong>Active Checklist:</strong> Valid personal identity cards, vehicle registration documents, active third-party insurance, and PUC certs are mandatory.</li>
+            </ul>
+            <div class="disclaimer-box">
+                💡 100% Free: There is zero cost to register or participate with our collective group convoy network.
+            </div>
+        </section>
+
+        <!-- Section: Call To Action Registration -->
+        <section id="register" class="cta-section">
+            <h2>Secure Your Spot</h2>
+            <p>Ready to hit the open highway? Fill out the brief security clearance registry form so our lead coordinators can safely catalog the total convoy vehicle numbers.</p>
+            
+            <!-- GOOGLE FORMS LINK: Replace the href attribute below with your real Google Form Link -->
+            <a href="https://google.com" target="_blank" class="btn-primary" id="form-link">Open Registration Form</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; Free Enthusiasts Convoy Group Network. Organized by drivers, for drivers.</p>
+    </footer>
+
+    <!-- JavaScript Interactivity Feature -->
+    <script>
+        // Smooth Scrolling logic for navigation buttons
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Optional Form Fallback Validation Check 
+        const formButton = document.getElementById('form-link');
+        formButton.addEventListener('click', function(e) {
+            if(formButton.getAttribute('href') === 'https://google.com') {
+                console.log("Admin Reminder: Replace the placeholder link with your customized Google Form URL.");
+            }
+        });
+    </script>
+</body>
+</html>
